@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Nunito");
+
+/*TAKES CARE OF THE GENERAL OUTLOOK*/
+
+body {
+    font-family: 'Nunito', sans-serif;
+}  
+body {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    background: url("https://res.cloudinary.com/noethix/image/upload/v1551533842/Inkedplanet-earth-hd-wallpapers-73230-9885988.png_LI.jpg") no-repeat center center fixed ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*FOR THE TITRE OF THE PAGE*/
+
+.title-container {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    font-family: 'Dancing Script';
+    background-color: rgba(60, 79, 94, 0.80);
+    width: 50%;
+    text-align: center;
+    padding: 50px;
+    border-radius: 200%;
+    margin-top: 20px;
+    color: #E0F5FA;
+}
+.title h1 { 
+    font-size:  100px;
+}
+
+.title p {
+    font-size: 30px;
+}
+
+/*FOR THE SELECTION OF CONTINENTS AND REGIONS*/
+
+.form-control {
+    display: inline-block;
+    width: 20%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    margin: 90px 20px 70px 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #E0F5FA;
+    background-color: rgba(42, 90, 140, 0.50);
+    background-clip: padding-box;
+    border: 1px solid rgba(42, 90, 140, 0.80);
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/**** BUTTONS THAT WERE HERE
+.btn {
+    padding: .900rem .900rem;
+    border-radius: 50%; 
+}
+.btn-primary {
+    color: rgba(117, 9, 241, 0.70);
+    background-color: #00d2d971;
+    border-color: #00d2d9;
+}
+
+.btn-primary:hover {
+    color: rgba(117, 9, 241, 0.70);
+    background-color: #d9cb0071;
+    border-color: #d9cb00b4;
+}*/
+
+/*FOR THE SORTING TABLES*/
+#tableau_wrapper {
+    font-family: 'Nunito', sans-serif;
+    width: 88%;
+    font-size: .85rem;
+    align-self: center;
+}
+
+button, select, input, optgroup, textarea {
+    background-color: rgba(42, 90, 140, 0.50);
+    border-radius: .25rem;
+    color: #E0F5FA;
+    border: 1px solid rgba(42, 90, 140, 0.80) !important;
+}
+
+.form-control {
+    background-color: rgba(42, 90, 140, 0.80);
+}
+option {
+    background-color: rgba(42, 90, 140, 0.1) !important;
+    border-radius: .25rem;
+    color: rgb(42, 90, 140);
+    border: 1px solid rgba(42, 90, 140, 0.80);
+}
+form {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 20px 0 90px 0;
+}
+
+label {
+    color: #E0F5FA;
+    padding: 20px;
+    margin: 20px 0 40px 0;
+    border-radius: .25rem;
+    background-color: rgba(42, 90, 140, 0.50);
+
+}
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+    color: #E0F5FA;
+    background-color: rgba(42, 90, 140, 0.80);
+}
+.table-striped tbody tr:nth-of-type(2n) {
+    color: #E0F5FA;
+    background-color: rgba(60, 79, 94, 0.80);
+}
+
+
+.table thead th {
+    background-color:  rgba(129, 179, 230, 0.8);
+    vertical-align: middle;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: none !important;
+}
+
+
+.table {
+    width: 70%;
+    text-align: center;
+    vertical-align: center;
+    margin: auto;
+    border-radius: 7px;
+}
+
+#tableau_paginate{
+    color: #E0F5FA;
+    padding: 40px;
+}
+
+#tableau_previous {
+    color: #E0F5FA !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 50% !important;
+    color: rgba(42, 90, 140, 0.10) !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    border-radius: 50% !important;
+    color: rgba(42, 90, 140, 0.10) !important;
+   
+}
+
+.paginate_button .current {
+    background-color: #E0F5FA !important; 
+}
+
+
