@@ -1,0 +1,64 @@
+{include file ="pdmHEAD.html"}
+
+<body>
+<div class="title-container">
+    <div class="title">
+        <h1>The World</h1>
+        <p>and its population</p>
+    </div>
+</div>
+
+<form>
+    <select id="select" onchange="changerContinent()" class="form-control" name="continent">
+        <option value="" SELECTED DISABLED>Choisissez votre continent</option>
+        {section name=table_continents loop=$continents}
+        <option value="{$continents[table_continents].id_continent}">{$continents[table_continents].libelle_continent}</option>
+        {/section}
+    </select>
+
+
+    <select id="select2" onchange="changerRegion()" class="form-control" name="region">
+        <option value="" SELECTED DISABLED>Choisissez votre région</option>
+        {section name=table_regions  loop=$regions}
+        <option value="{$regions[table_regions].id_region}"?>{$regions[table_regions].libelle_region}</option>
+        {/section}
+    </select>
+
+</form>
+
+
+
+
+<table id="tableau" class="table table-striped" class="tableau">
+    <thead>
+        <tr>
+            <th scope="col">PAYS</th>
+            <th scope="col">POPULATION TOTALE (EN MILLIERS)</th>
+            <th scope="col">TAUX DE NATALITE</th>
+            <th scope="col">TAUX DE MORTALITE</th>
+            <th scope="col">ESPERENCE DE VIE</th>
+            <th scope="col">TAUX DE MORTALITE INFANTILE</th>
+            <th scope="col">NOMBRE D'ENFANT(S) PAR FEMME</th>
+            <th scope="col">TAUX DE CROISSANCE</th>
+            <th scope="col">POPULATION DE 65 ANS ET PLUS (EN MILLIERS)</th>
+        </tr>
+    </thead>
+   
+    <tbody>
+        {section name=table_pays loop=$pays} 
+        <tr scope="row">
+            <th>{$pays[table_pays].libelle_pays}</th>
+            <td>{$pays[table_pays].population_pays}</td>
+            <td>{$pays[table_pays].taux_natalite_pays}</td>
+            <td>{$pays[table_pays].taux_mortalite_pays}</td>
+            <td>{$pays[table_pays].esperance_vie_pays}</td>
+            <td>{$pays[table_pays].taux_mortalite_infantile_pays}</td>
+            <td>{$pays[table_pays].nombre_enfants_par_femme_pays}</td>
+            <td>{$pays[table_pays].taux_croissance_pays}</td>
+            <td>{$pays[table_pays].population_plus_65_pays}></td>
+        </tr>
+        {/section}
+    </tbody>
+</table>
+
+{include file ="pdmFOOT.html"}
